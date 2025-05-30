@@ -1,6 +1,6 @@
 # Sales-Sparta: End-to-End Sales Data Pipeline
 
-**Sales-Sparta Ltd.** partnered with Clark University students to build a scalable data pipeline that enables real-time visibility into sales performance, customer behavior, and brand performance. This solution is designed to serve a growing sales team with a simple, effective, and modular infrastructure that can evolve as the business scales.
+**Sales-Sparta Ltd.** wants to build a scalable data pipeline that enables real-time visibility into sales performance, customer behavior, and brand performance. This solution is designed to serve a growing sales team with a simple, effective, and modular infrastructure that can evolve as the business scales.
 
 ## Project Overview
 
