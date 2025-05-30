@@ -1,55 +1,62 @@
-#Sales-sparta Data Pipeline
-A comprehensive data engineering solution for Sales-sparta Ltd, enabling real-time business insights and lead management through automated data collection, storage, and visualization.
-#🚀 Project Overview
-Sales-sparta Ltd approached Clark students to develop a scalable data pipeline that allows their growing sales team to collect and nurture leads while providing management with key business metrics in real-time. This project addresses the critical need for data centralization, security, and actionable business intelligence.
-#🏗️ Architecture
-Our data pipeline follows modern data engineering principles with the following components:
-Salesforce (CRM) → Airbyte (ETL) → Snowflake (Data Warehouse) → Tableau (Analytics)
-#🛠️ Technology Stack
-ComponentTechnologyPurposeData SourceSalesforceCloud-based CRM for customer data management and lead trackingData IntegrationAirbyteOpen-source ETL platform for data replication and transformationData WarehouseSnowflakeCloud-based data warehousing for scalable storage and processingAnalyticsTableauInteractive dashboards and data visualization
-#📊 Key Features
+# Sales-Sparta: End-to-End Sales Data Pipeline
 
-Automated Data Pipeline: Seamless data flow from Salesforce to Snowflake via Airbyte
-Real-time Analytics: Business metrics updated through batch processing
-Scalable Architecture: Cloud-based solution that grows with business needs
-Data Security: Role-based access control and secure data storage
-Interactive Dashboards: Comprehensive business insights through Tableau
+**Sales-Sparta Ltd.** partnered with Clark University students to build a scalable data pipeline that enables real-time visibility into sales performance, customer behavior, and brand performance. This solution is designed to serve a growing sales team with a simple, effective, and modular infrastructure that can evolve as the business scales.
 
-#🔄 Data Engineering Lifecycle
-#1. Data Generation
+## Project Overview
 
-Challenge: Manual Excel-based data entry prone to errors and security risks
-Solution: Implemented Salesforce CRM for standardized data collection
+This project demonstrates how raw sales data can be collected, stored, transformed, and visualized to enable data-driven decision-making. The pipeline connects Salesforce (CRM data source), Snowflake (data warehouse), Airbyte (ETL/ELT ingestion), and Tableau (BI & dashboarding).
 
-2. Data Storage
+## Tools and Technologies
 
-Infrastructure: Snowflake cloud data warehouse
-Benefits: Centralized repository with future data lake capabilities
-Security: Role-based access control and data governance
+| Component      | Technology | Purpose |
+|----------------|------------|---------|
+| CRM            | Salesforce | Capture and manage customer/sales data |
+| Data Warehouse | Snowflake  | Store and query transformed data |
+| ETL Pipeline   | Airbyte    | Ingest and move data from source to warehouse |
+| BI Tool        | Tableau    | Visualize metrics and generate insights |
 
-3. Data Ingestion & Transformation
+## Data Pipeline Lifecycle
 
-Tool: Airbyte for low-code data integration
-Process: Batch processing with scheduled data transfers
-Environments:
+1. **Data Generation**  
+   - Sales reps manually enter data into Salesforce.
+   - Previously done via Excel sheets, which posed risks (e.g., data loss, low accuracy).
 
-Staging: Data cleaning and transformation
-Production: Clean, validated data for end users
+2. **Data Storage**  
+   - Raw data is stored securely in Snowflake cloud data warehouse.
+   - Staging and Production environments used for clean separation of raw vs. transformed data.
+
+3. **Data Ingestion & Transformation**  
+   - Airbyte handles batch ingestion from Salesforce into Snowflake.
+   - Staging tables are transformed (null handling, column standardization) before promotion to production.
+
+4. **Data Serving & Visualization**  
+   - Transformed production tables are connected to Tableau.
+   - Dashboards use Tableau Extracts for better performance.
+
+## Key Business Insights
+
+- **Total Orders**: 250  
+- **Average Order Value**: $522  
+- **Top Sales Months**: August 2022, September 2023  
+- **High-Performing States**: California & Texas  
+- **Top Brands**: Luxelife and Ecoera  
+- **Profit**: Over $28,000 (consistently positive margins)
+
+## Tableau Dashboard
+
+Explore the live dashboard here:  
+🔗 [View on Tableau Public](https://public.tableau.com/app/profile/santosh.govardhan.kyathsandra.badarinath/viz/Sales-spartametrics/Dashboard1)
+
+## Challenges Faced
+
+- **Data Quality**: Null values in CSVs required robust cleaning and validation.
+- **Data Modeling**: Inconsistent dimension keys violated primary key constraints.
+- **Transformation Logic**: Standardization and feature engineering in staging layer.
+
+## Lessons Learned
+
+- Importance of staging environments for safe experimentation.
+- The trade-off between real-time vs. batch ingestion.
+- Effective visualization depends on clean and well-joined data.
 
 
-
-4. Data Serving
-
-Platform: Tableau with Snowflake integration
-Features: Extract mode for optimized performance
-Structure: Logical data layer with established table relationships
-
-📈 Business Insights
-Our analytics dashboard reveals key business metrics:
-
-Total Orders: 250 orders processed
-Average Order Value: $522
-Peak Sales Periods: August 2022 and September 2023 (16 orders each)
-Top Markets: California and Texas drive majority of sales and profit
-Total Profit: $28,000 with consistently positive margins
-Leading Brand: Luxelife, followed by Ecoera
